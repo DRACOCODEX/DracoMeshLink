@@ -397,4 +397,4 @@ sudo crontab -e
   + Save File
 
 ## Backup and Image Build
-Goto Backup and Image Directory for ReadMe and Scripts
+Goto Image Build Directory for ReadMe and Scripts
