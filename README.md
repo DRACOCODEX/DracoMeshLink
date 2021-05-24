@@ -60,19 +60,19 @@ passwd
 sudo raspi-config
 ```
 
+  + Select `Interface Options`
+    + Select `P4 SPI`
+    + Select `Yes`
     + Select `Interface Options`
-        - Select `P4 SPI`
-        - Select `Yes`
-    + Select `Interface Options`
-        - Select `P5 I2C`
-        - Select `Yes`
-    + Select `Interface Options`
-        - Select `P6 Serial Port`
-        - Select `No` for shell access
-        - Select `Yes` for serial port hardware
-        - Select `Ok` to confirm
-    + Set hostname if desired
-    + Save changes and reboot by selecting `Finish`
+      + Select `P5 I2C`
+      + Select `Yes`
+  + Select `Interface Options`
+    + Select `P6 Serial Port`
+    + Select `No` for shell access
+    + Select `Yes` for serial port hardware
+    + Select `Ok` to confirm
+  + Set hostname if desired
+  + Save changes and reboot by selecting `Finish`
 
 
 + SSH back into raspberry pi
