@@ -396,5 +396,12 @@ sudo crontab -e
   ```
   + Save File
 
+## Wallet
+Setup Wallet and Connect to Miner / Gateway.  This is only needed to receive HNT Coins.  Need a HW Device and Key for this.
+
+
+
+
+
 ## Backup and Image Build
 Goto Image Build Directory for ReadMe and Scripts
