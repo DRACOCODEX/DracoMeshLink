@@ -395,3 +395,6 @@ sudo crontab -e
   0 */4 * * * /home/pi/helium_miner_scripts/miner_latest.sh >> /var/log/miner_latest.log
   ```
   + Save File
+
+## Backup and Image Build
+Goto Backup and Image Directory for ReadMe and Scripts
