@@ -1,0 +1,249 @@
+CoreCell reset through GPIO17...
+CoreCell power enable through GPIO2...
+*** Packet Forwarder ***
+Version: 1.0.5
+*** SX1302 HAL library version info ***
+Version: 1.0.5;
+***
+INFO: Little endian host
+INFO: found configuration file global_conf.json, parsing it
+INFO: global_conf.json does contain a JSON object named SX130x_conf, parsing SX1302 parameters
+INFO: spidev_path /dev/spidev0.0, lorawan_public 1, clksrc 0, full_duplex 0
+INFO: antenna_gain 0 dBi
+INFO: Configuring legacy timestamp
+INFO: Configuring Tx Gain LUT for rf_chain 0 with 16 indexes for sx1250
+INFO: radio 0 enabled (type SX1250), center frequency 904300000, RSSI offset -215.399994, tx enabled 1, single input mode 0
+INFO: radio 1 enabled (type SX1250), center frequency 905000000, RSSI offset -215.399994, tx enabled 0, single input mode 0
+INFO: Lora multi-SF channel 0>  radio 0, IF -400000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 1>  radio 0, IF -200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 2>  radio 0, IF 0 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 3>  radio 0, IF 200000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 4>  radio 1, IF -300000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 5>  radio 1, IF -100000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 6>  radio 1, IF 100000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora multi-SF channel 7>  radio 1, IF 300000 Hz, 125 kHz bw, SF 5 to 12
+INFO: Lora std channel> radio 0, IF 300000 Hz, 500000 Hz bw, SF 8, Explicit header
+INFO: FSK channel 8 disabled
+INFO: global_conf.json does contain a JSON object named gateway_conf, parsing gateway parameters
+INFO: gateway MAC address is configured to AA555A0000000000
+INFO: server hostname or IP address is configured to "localhost"
+INFO: upstream port is configured to "1680"
+INFO: downstream port is configured to "1680"
+INFO: downstream keep-alive interval is configured to 10 seconds
+INFO: statistics display interval is configured to 30 seconds
+INFO: upstream PUSH_DATA time-out is configured to 100 ms
+INFO: packets received with a valid CRC will be forwarded
+INFO: packets received with a CRC error will NOT be forwarded
+INFO: packets received with no CRC will NOT be forwarded
+INFO: GPS I2C path is configured to "/dev/i2c-1"
+INFO: global_conf.json does not contain a JSON object named debug_conf
+INFO: no debug configuration
+INFO: [main] port /dev/i2c-1 open for GPS synchronization
+INFO: [main] concentrator started, packet can now be received
+INFO: concentrator EUI: 0x0016c001ff1a0ac3
+INFO: [down] PULL_ACK received in 0 ms
+INFO: [down] PULL_ACK received in 0 ms
+INFO: [down] PULL_ACK received in 0 ms
+
+##### 2021-05-24 02:35:37 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 0 (0 bytes)
+# PUSH_DATA acknowledged: 0.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (100.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 30722150
+# SX1302 counter (PPS):  30325723
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# Invalid time reference (age: 1621823737 sec)
+# no valid GPS coordinates available yet
+### Concentrator temperature: 30 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2021-05-24 02:35:37 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":0.0,"dwnb":0,"txnb":0,"temp":30.0}}
+INFO: [up] PUSH_ACK received in 1 ms
+INFO: [down] PULL_ACK received in 0 ms
+INFO: [down] PULL_ACK received in 0 ms
+INFO: [down] PULL_ACK received in 0 ms
+
+##### 2021-05-24 02:36:07 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (123 bytes)
+# PUSH_DATA acknowledged: 100.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (100.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 60722333
+# SX1302 counter (PPS):  60325722
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# Invalid time reference (age: 1621823767 sec)
+# no valid GPS coordinates available yet
+### Concentrator temperature: 30 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2021-05-24 02:36:07 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":100.0,"dwnb":0,"txnb":0,"temp":30.0}}
+INFO: [up] PUSH_ACK received in 0 ms
+INFO: [down] PULL_ACK received in 0 ms
+INFO: [down] PULL_ACK received in 0 ms
+INFO: [down] PULL_ACK received in 1 ms
+
+##### 2021-05-24 02:36:37 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (125 bytes)
+# PUSH_DATA acknowledged: 100.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (100.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 90722353
+# SX1302 counter (PPS):  90325722
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# Invalid time reference (age: 1621823797 sec)
+# no valid GPS coordinates available yet
+### Concentrator temperature: 30 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2021-05-24 02:36:37 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":100.0,"dwnb":0,"txnb":0,"temp":30.0}}
+INFO: [up] PUSH_ACK received in 0 ms
+INFO: [down] PULL_ACK received in 0 ms
+INFO: [down] PULL_ACK received in 2 ms
+INFO: [down] PULL_ACK received in 1 ms
+
+##### 2021-05-24 02:37:07 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (125 bytes)
+# PUSH_DATA acknowledged: 100.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (100.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 120722394
+# SX1302 counter (PPS):  120325721
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# Invalid time reference (age: 1621823827 sec)
+# no valid GPS coordinates available yet
+### Concentrator temperature: 30 C ###
+##### END #####
+
+JSON up: {"stat":{"time":"2021-05-24 02:37:07 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":100.0,"dwnb":0,"txnb":0,"temp":30.0}}
+INFO: [up] PUSH_ACK received in 1 ms
+INFO: [down] PULL_ACK received in 5 ms
+INFO: [down] PULL_ACK received in 0 ms
+INFO: [down] PULL_ACK received in 0 ms
+
+##### 2021-05-24 02:37:37 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (125 bytes)
+# PUSH_DATA acknowledged: 100.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 3 (100.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 150722449
+# SX1302 counter (PPS):  150325720
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# Invalid time reference (age: 1621823857 sec)
+# no valid GPS coordinates available yet
+### Concentrator temperature: 30 C ###
+##### END #####
+
+JSON up: {"stat":CoreCell reset through GPIO17...
+CoreCell power enable through GPIO2...
+{"time":"2021-05-24 02:37:37 GMT","rxnb":0,"rxok":0,"rxfw":0,"ackr":100.0,"dwnb":0,"txnb":0,"temp":30.0}}
+INFO: [up] PUSH_ACK received in 1 ms
+INFO: [down] PULL_ACK received in 0 ms
+
+##### 2021-05-24 02:37:39 GMT #####
+### [UPSTREAM] ###
+# RF packets received by concentrator: 0
+# CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
+# RF packets forwarded: 0 (0 bytes)
+# PUSH_DATA datagrams sent: 1 (125 bytes)
+# PUSH_DATA acknowledged: 100.00%
+### [DOWNSTREAM] ###
+# PULL_DATA sent: 1 (100.00% acknowledged)
+# PULL_RESP(onse) datagrams received: 0 (0 bytes)
+# RF packets sent to concentrator: 0 (0 bytes)
+# TX errors: 0
+### SX1302 Status ###
+# SX1302 counter (INST): 152759361
+# SX1302 counter (PPS):  152325720
+# BEACON queued: 0
+# BEACON sent so far: 0
+# BEACON rejected: 0
+### [JIT] ###
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+#--------
+src/jitqueue.c:442:jit_print_queue(): INFO: [jit] queue is empty
+### [GPS] ###
+# Invalid time reference (age: 1621823859 sec)
+# no valid GPS coordinates available yet
+### Concentrator temperature: 30 C ###
+##### END #####
+
+INFO: End of upstream thread
+INFO: GPS closed successfully
+INFO: concentrator stopped successfully
+INFO: Exiting packet forwarder program

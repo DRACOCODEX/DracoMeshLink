@@ -1,0 +1,4 @@
+# Todo list
+
+- Auto recognize the machine architecture.
+- read from a config file to make updating the repo easier

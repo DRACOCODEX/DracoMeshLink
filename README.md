@@ -186,15 +186,14 @@ git clone https://github.com/helium/sx1302_hal.git
 cd sx1302_hal
 ```
 
-+ If you do not want to have to put in your password a million times in the next step, you can create a ssh key in the sub steps below otherwise skip to the next step.
-    - Create the ssh key pair.
-
++ Create a ssh key, so we can avoid entering the password a million times in the next step
+  + Create the ssh key pair.
     ```console
     ssh-keygen -t rsa
     ```
     Press enter three times to accept the defaults.
 
-    - Set up your user to use the key pair.
+    + Set up your user to use the key pair.
 
     ```console
     ssh-copy-id -i ~/.ssh/id_rsa.pub pi@localhost
@@ -238,10 +237,7 @@ sudo usermod -aG gpio pi
 sudo reboot
 ```
 
-+ SSH back in to pi
-```console
-ssh pi@raspberrypi.local
-```
++  SSH back into Raspberry Pi
 
 + Move to lora packet folder bin directory
 ```console
@@ -252,12 +248,19 @@ cd sx1302_hal/bin
 ```console
 ./lora_pkt_fwd
 ```
+  + Test Packet Forwarder and dump to file for Test
+  ```console
+  ./lora_pkt_fwd > PacketFWD_TEST.txt
+  ```
+  + Secure Copy from Pi to OS X Local directory (must be logged out of Pi)
+  ```console
+  scp pi@IP-ADDRESS:PacketFWD_Test.txt .
+  ```
 
 + Stop the packet forwarder by pressing CTRL-c
 
 
 ## Set up auto start scripts
-Source: https://github.com/Lora-net/sx1302_hal/tree/master/tools/systemd
 
 + Create a systemd service script
 ```console
@@ -287,7 +290,7 @@ User=pi
 WantedBy=multi-user.target
 ```
 
-+ Save the file by pressing CTRL-X, and then Y, and then Enter to save changes
++ Save the File and Exit
 
 + Reload the daemon
 
@@ -331,7 +334,7 @@ if $programname == 'lora_pkt_fwd' then /var/log/lora_pkt_fwd.log
 if $programname == 'lora_pkt_fwd' then ~
 ```
 
-+ Save the file by pressing CTRL-X, and then Y, and then Enter to save changes
++ Save the File and Exit
 
 + Restart the rsyslog service
 
@@ -350,8 +353,7 @@ sudo reboot
 ```console
 tail /var/log/lora_pkt_fwd.log
 ```
-## Optional - Set up Miner autoupdate script
-Source: https://github.com/Wheaties466/helium_miner_scripts
+## Set up Miner autoupdate script
 
 + Clone miner auto update script repo
 ```console
@@ -373,8 +375,6 @@ chmod +x miner_latest.sh
 sudo touch /var/log/miner_latest.log
 ```
 
-+ By default the script is configured for US915 frequencies. To use the miner in other regios like EU868 the script shall be changed by adding the --env REGION_OVERRIDE=EU868 to the line with docker run.
-
 + Run the script
 ```console
 ./miner_latest.sh
@@ -384,16 +384,14 @@ sudo touch /var/log/miner_latest.log
 ```console
 sudo crontab -e
 ```
+  + Choose "1" to make nano your editor of choice.
 
-+ Choose "1" to make nano your editor of choice.
+  + Add the following at the end of the text editor.
 
-+ Add the following at the end of the text editor.
-
-```
-# Check for updates on miner image
-# Use whatever path you have your repo setup with.
-# If you need to test your cron you can use the following site and add "&& curl -s 'https://webhook.site/#!/~'" to the end of your cron and it will make a web request to your specific url when it completes.
-0 */4 * * * /home/pi/helium_miner_scripts/miner_latest.sh >> /var/log/miner_latest.log
-```
-
-+ Save the file by pressing CTRL-X, and then Y, and then Enter to save changes
+  ```
+  # Check for updates on miner image
+  # Use whatever path you have your repo setup with.
+  # If you need to test your cron you can use the following site and add "&& curl -s 'https://webhook.site/#!/~'" to the end of your cron and it will make a web request to your specific url when it completes.
+  0 */4 * * * /home/pi/helium_miner_scripts/miner_latest.sh >> /var/log/miner_latest.log
+  ```
+  + Save File
