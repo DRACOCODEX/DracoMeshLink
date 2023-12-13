@@ -1,5 +1,4 @@
-# HELIUM MVP 1.0.0
-Warfighters or Peoples Low Powered Network - Prototype
+# Warfighters Low Powered Network - Prototype w/ HELIUM
 
 ## Hardware
 + RAK
