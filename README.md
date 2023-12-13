@@ -1,4 +1,6 @@
-# Warfighters Low Powered Network - Prototype w/ HELIUM
+# DracoMeshLink
+- Provides a Low Powered Warfighters Mesh Network that uses LoRaWAN and blockchain to interconnect IoT in the battlefield
+- Prototype built w/ HELIUM
 
 ## Hardware
 + RAK
