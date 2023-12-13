@@ -1,5 +1,5 @@
 # DracoMeshLink
-- Provides a Low Powered Warfighters Mesh Network that uses LoRaWAN and blockchain to interconnect IoT in the battlefield
+- Provides a Low Powered Warfighters Mesh Network that uses LoRaWAN and Blockchain to interconnect IoT in the battlefield
 - Prototype built w/ HELIUM
 
 ## Hardware
